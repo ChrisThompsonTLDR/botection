@@ -1,16 +1,14 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/r/{subreddit}', ['as' => 'sub', 'uses' => 'PageController@sub']);
+Route::get('/r/{subreddit}/comments/{id}', ['as' => 'thread', 'uses' => 'PageController@thread']);
+
+Auth::routes();
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('authorize', ['as' => 'oauth.authorize', 'uses' => 'OauthController@authorize_it']);
+    Route::get('callback',  ['as' => 'oauth.callback',  'uses' => 'OauthController@callback']);
+
+    Route::post('watch', ['as' => 'watch.store', 'uses' => 'WatchController@store']);
 });

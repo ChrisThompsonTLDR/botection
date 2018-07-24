@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'reddit' => [
+        'client_id' => env('REDDIT_CLIENT_ID'),
+        'secret'    => env('REDDIT_SECRET'),
+    ]
+
 ];

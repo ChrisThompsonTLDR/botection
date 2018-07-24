@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/New_York',
 
     /*
     |--------------------------------------------------------------------------
@@ -160,6 +160,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -209,6 +210,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
+    'subreddits' => ['JoeRogan', 'MMA', 'ChapoTrapHouse', 'samharris', 'JordanPeterson', 'thefighterandthekid', 'Ice_Poseidon', 'milliondollarextreme', 'The_Donald', 'WayOfTheBern'],
+
+    'ignoreSubs' => ['HerbalRVA', 'Xanaxcartel', 'CentristPolitics', 'CBTS_Stream', 'necrophilia', 'xray', 'fakeapp', 'melbournecrime', 'TheSamPepper', 'forgeries', 'illegaltorrents', 'torrentrequests', 'WhereisAndrewAnglin'],
 ];
