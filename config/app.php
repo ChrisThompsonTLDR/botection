@@ -214,7 +214,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
     ],
 
-    'subreddits' => ['JoeRogan', 'MMA', 'ChapoTrapHouse', 'samharris', 'JordanPeterson', 'thefighterandthekid', 'Ice_Poseidon', 'milliondollarextreme', 'The_Donald', 'WayOfTheBern'],
+    'subreddits' => ['JoeRogan', 'MMA', 'ChapoTrapHouse', 'samharris', 'JordanPeterson', 'thefighterandthekid', 'Ice_Poseidon', 'milliondollarextreme', 'The_Donald', 'WayOfTheBern', 'rickandmorty'],
 
-    'ignoreSubs' => ['HerbalRVA', 'Xanaxcartel', 'CentristPolitics', 'CBTS_Stream', 'necrophilia', 'xray', 'fakeapp', 'melbournecrime', 'TheSamPepper', 'forgeries', 'illegaltorrents', 'torrentrequests', 'WhereisAndrewAnglin'],
+    'ignoreSubs' => ['NYCtrees', 'NatSoc', 'unfilter', 'NYCtreesV2', 'HerbalRVA', 'Xanaxcartel', 'CentristPolitics', 'CBTS_Stream', 'necrophilia', 'xray', 'fakeapp', 'melbournecrime', 'TheSamPepper', 'forgeries', 'illegaltorrents', 'torrentrequests', 'WhereisAndrewAnglin'],
 ];

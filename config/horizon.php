@@ -86,7 +86,7 @@ return [
                 'connection' => 'redis',
                 'queue' => ['comments', 'threads', 'authors'],
                 'balance' => 'auto',
-                'processes' => 15,
+                'processes' => 12,
                 'tries' => 2,
             ],
         ],

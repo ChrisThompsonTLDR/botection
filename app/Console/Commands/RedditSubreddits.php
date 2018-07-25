@@ -137,6 +137,8 @@ class RedditSubreddits extends Command
 
                 $this->info("\n");
             }
+            
+            sleep(2);
         }
     }
 }
