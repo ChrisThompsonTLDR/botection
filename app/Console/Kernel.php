@@ -38,7 +38,7 @@ class Kernel extends ConsoleKernel
 
 //        $schedule->command('reddit:watch')->everyFiveMinutes();
 
-        $schedule->command('reddit:subreddit', ['JoeRogan'])->everyMinute();
+//        $schedule->command('reddit:subreddit', ['JoeRogan'])->everyMinute();
 //        $schedule->command('reddit:subreddit', ['MMA'])->everyMinute();
 //        $schedule->command('reddit:subreddit', ['ChapoTrapHouse'])->everyMinute();
 //        $schedule->command('reddit:subreddit', ['samharris'])->everyMinute();
@@ -48,11 +48,11 @@ class Kernel extends ConsoleKernel
 //        $schedule->command('reddit:subreddit', ['milliondollarextreme'])->everyMinute();
 //        $schedule->command('reddit:subreddit', ['The_Donald'])->everyMinute();
 
-        $schedule->command('reddit:subreddits')->everyMinute();
+        $schedule->command('reddit:subreddits')->everyMinute()->withoutOverlapping(10);
 
-        $schedule->command('author:response')->everyFifteenMinutes();
+        $schedule->command('author:response')->everyFifteenMinutes()->withoutOverlapping(10);
 
-        $schedule->command('reddit:comment')->everyMinute();
+        $schedule->command('reddit:comment')->everyMinute()->withoutOverlapping(10);
     }
 
     /**
