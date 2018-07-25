@@ -3,7 +3,7 @@
 @section ('content')
 
 <nav class="navbar navbar-light bg-light mb-5">
-    <a class="navbar-brand" href="{{ route('home') }}">{{ config('app.name') }}</a>
+    <a class="navbar-brand" href="{{ route('home') }}"><i class="fal fa-robot"></i> botection</a>
     A tool for tracking down possible bots and bridaging.
 </nav>
 @include ('blocks.alerts')

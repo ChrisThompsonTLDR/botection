@@ -30,7 +30,7 @@
         <div class="col">
             <div class="card bg-info text-white text-center">
                 <div class="card-body">
-                    <h3 class="card-title">{{ number_format($thread->score / $thread->num_comments, 2) }}</h3>
+                    <h3 class="card-title">@if ($thread->num_comments != 0){{ number_format($thread->score / $thread->num_comments, 2) }}@else{{ '--' }}@endif</h3>
                     score / comments
                 </div>
             </div>

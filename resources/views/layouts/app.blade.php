@@ -10,17 +10,8 @@
     @stack ('before-styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.2/cosmo/bootstrap.min.css" integrity="sha256-w8S2LUcn9W+xBRanLrLK7e8HCKEXBohp3kRTrCl0S1g=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @stack ('after-styles')
-    <style>
-    .text-deleted,
-    .text-deleted .text-muted {
-        color: #E0E0E0 !important;
-    }
-    body {
-        margin-bottom: 200px;
-        font-family: 'Roboto', sans-serif;
-    }
-    </style>
 </head>
 <body>
 @yield ('content')

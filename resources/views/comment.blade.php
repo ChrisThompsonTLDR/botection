@@ -21,7 +21,7 @@ if ($comment->author == '[deleted]') {$muted = 'text-deleted';}
 
                         <span class="ml-2" data-toggle="tooltip" data-placement="top" title="{{ $comment->created_at->format('D M j, Y H:i T') }}">{{ $comment->created_at->diffForHumans() }}</span>
                         / <span data-toggle="tooltip" data-placement="top" title="{{ $comment->created_at->addSeconds($comment->seconds_to_respond)->format('D M j, Y H:i T') }}">{{ number_format($comment->seconds_to_respond) }} seconds to respond</span>
-                        @if ($comment->user->seconds_to_respond)
+                        @if ($comment->user && $comment->user->seconds_to_respond)
                             / <span data-toggle="tooltip" data-placement="top" title="user usually takes {{ number_format($comment->user->seconds_to_respond) }} seconds to respond"><i class="fal fa-chevron-double-{{ (($comment->user->seconds_to_respond > $comment->seconds_to_respond) ? 'up' : 'down') }}"></i></span>
                         @else
                         / --
